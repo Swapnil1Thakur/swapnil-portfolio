@@ -1,0 +1,137 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.2rem 0;
+  transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav.scrolled {
+  background: rgba(6,8,16,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 0.85rem 0;
+  box-shadow: 0 1px 0 rgba(99,120,255,0.08), 0 4px 32px rgba(0,0,0,0.4);
+}
+
+.inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.logoAccent {
+  color: var(--accent);
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text2);
+  text-decoration: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  transition: var(--transition);
+  letter-spacing: 0.01em;
+}
+
+.links a:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.05);
+}
+
+.links a.activeLink {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.resumeBtn {
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  color: var(--accent) !important;
+  border: 1.5px solid var(--accent) !important;
+  background: transparent !important;
+  padding: 0.4rem 1rem !important;
+  border-radius: 8px !important;
+  margin-left: 0.5rem;
+  transition: var(--transition) !important;
+}
+
+.resumeBtn:hover {
+  background: var(--accent-soft) !important;
+  transform: none !important;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.cross { opacity: 0; }
+.crossMid { transform: none; opacity: 0; }
+
+@media (max-width: 768px) {
+  .burger { display: flex; }
+  .links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: -1;
+  }
+  .links.open {
+    display: flex;
+  }
+  .links a {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+  }
+  .resumeBtn {
+    margin-left: 0 !important;
+  }
+}
