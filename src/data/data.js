@@ -17,7 +17,7 @@ export const personalInfo = {
   // ✏️ EASY UPDATE: Replace the file ID below with your latest CV's Google Drive file ID.
   // How to get it: Drive > Share > "Anyone with link" > copy the ID from the URL.
   // Example URL: https://drive.google.com/file/d/THIS_IS_THE_FILE_ID/view
-  resumeLink: "https://drive.google.com/file/d/1N_gaG3IEmOGOVxGm87ZEf7y9ekSAf0vn/view?usp=sharing",
+  resumeLink: "https://drive.google.com/file/d/1vLf-rZOAQzptY6eUIQm3siaZ8HsBBYJh/view?usp=sharing",
 };
 
 export const education = [
